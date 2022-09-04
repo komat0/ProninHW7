@@ -1,13 +1,13 @@
-public class Human extends Persons implements Actions {
+public class Human implements Actions {
 
     private String name;
     private int humanRunDistance;
     private int humanJumpDistance;
 
-    public Human(String name, int humanRunDistance, int humanJumpDistande) {
+    public Human(String name, int humanRunDistance, int humanJumpDistance) {
         this.name = name;
         this.humanRunDistance = humanRunDistance;
-        this.humanJumpDistance = humanJumpDistande;
+        this.humanJumpDistance = humanJumpDistance;
     }
 
     public void info() {
@@ -15,21 +15,17 @@ public class Human extends Persons implements Actions {
                 humanJumpDistance + " meters");
     }
 
-    public String getName() {
-        return name;
-    }
-
-    public int getHumanRunDistance() {
+    public int getRunDistance() {
         return humanRunDistance;
     }
 
-    public int getHumanJumpDistance() {
+    public int getJumpDistance() {
         return humanJumpDistance;
     }
 
     @Override
     public void run(int runDistance, int treadmillLength) {
-        if (runDistance <= treadmillLength) {
+        if (treadmillLength <= runDistance) {
             System.out.println(name + " ran " + treadmillLength + " meters");
         } else {
             System.out.println(name + " can't ran " + treadmillLength + " meters");

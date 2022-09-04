@@ -1,13 +1,13 @@
-public class Robot extends Persons implements Actions {
+public class Robot implements Actions {
 
     private String name;
     private int robotRunDistance;
     private int robotJumpDistance;
 
-    public Robot(String name, int robotRunDistance, int robotJumpDistande) {
+    public Robot(String name, int robotRunDistance, int robotJumpDistance) {
         this.name = name;
         this.robotRunDistance = robotRunDistance;
-        this.robotJumpDistance = robotJumpDistande;
+        this.robotJumpDistance = robotJumpDistance;
     }
 
     public void info() {
@@ -15,9 +15,17 @@ public class Robot extends Persons implements Actions {
                 robotJumpDistance + " meters");
     }
 
+    public int getRunDistance() {
+        return robotRunDistance;
+    }
+
+    public int getJumpDistance() {
+        return robotJumpDistance;
+    }
+
     @Override
     public void run(int runDistance, int treadmillLength) {
-        if (runDistance <= treadmillLength) {
+        if (treadmillLength <= runDistance) {
             System.out.println(name + " ran " + treadmillLength + " meters");
         } else {
             System.out.println(name + " can't ran " + treadmillLength + " meters");

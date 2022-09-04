@@ -6,17 +6,13 @@ public class Wall implements Obstacles {
         this.wallHeight = wallHeight;
     }
 
+    @Override
+    public int getTreadmillLength() {
+        return 0;
+    }
+
+    @Override
     public int getWallHeight() {
         return wallHeight;
-    }
-
-    @Override
-    public void treadmillOn(int runDistance, int treadmillLength) {
-
-    }
-
-    @Override
-    public void jumpOnWall(int jumpDistance, int wallHeight) {
-
     }
 }

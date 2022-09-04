@@ -1,4 +1,4 @@
-public class Cat extends Persons implements Actions {
+public class Cat implements Actions {
 
     private String name;
     private int catRunDistance;
@@ -15,21 +15,17 @@ public class Cat extends Persons implements Actions {
                 catJumpDistance + " meters");
     }
 
-    public String getName() {
-        return name;
-    }
-
-    public int getCatRunDistance() {
+    public int getRunDistance() {
         return catRunDistance;
     }
 
-    public int getCatJumpDistance() {
+    public int getJumpDistance() {
         return catJumpDistance;
     }
 
     @Override
     public void run(int runDistance, int treadmillLength) {
-        if (runDistance <= treadmillLength) {
+        if (treadmillLength <= runDistance) {
             System.out.println(name + " ran " + treadmillLength + " meters");
         } else {
             System.out.println(name + " can't ran " + treadmillLength + " meters");

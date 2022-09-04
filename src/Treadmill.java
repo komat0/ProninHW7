@@ -6,15 +6,13 @@ public class Treadmill implements Obstacles {
         this.treadmillLength = treadmillLength;
     }
 
+    @Override
     public int getTreadmillLength() {
         return treadmillLength;
     }
 
     @Override
-    public void treadmillOn(int runDistance, int treadmillLength) {
-    }
-
-    @Override
-    public void jumpOnWall(int jumpDistance, int wallHeight) {
+    public int getWallHeight() {
+        return 0;
     }
 }
